@@ -42,98 +42,28 @@ export default function Features() {
                                         <Img src={Imge4} alt="Image" />
                                     </Image2>
                                 </SectionLeft>
-                                <SectionRight>
-                                    <SectionH2>
-                                        Our Best Breakfast
-                                    </SectionH2>
-                                    <SectionPara>
+                                <SectionRights>
+                                    <Section2H2>
+                                        Our Best <Bo>Breakfast</Bo>
+                                    </Section2H2>
+                                    <SectionPara1>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                         , when an unknown printer took a galley of type and scrambled it to make a type
                                         specimen book. It has survived not only five centuries,
-                                    </SectionPara>
+                                    </SectionPara1>
                                     <SectionButton>
                                         <SectionAtag>
                                             Read More
                                         </SectionAtag>
                                     </SectionButton>
-                                </SectionRight>
+                                </SectionRights>
                             </SectionItem>
                         </SectionItems>
                     </Wrapper>
                 </Feature>
-                <About>
-                    <Wrapper>
-                        <Container>
-                            <AboutLeft>
-                                <Abouth2>
-                                    About Our Hotel
-                                </Abouth2>
-                                <AboutPara>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                        , when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book. It has survived not only five centuries,
-                                </AboutPara>
-                            </AboutLeft>
-                            <AboutRight>
-                                <AboutImage>
-                                    <RightImage src="" alt="Image" />
-                                </AboutImage>
-                            </AboutRight>
-                        </Container>
-                    </Wrapper>
-                </About>
-                <Testimonial>
-                    <Wrapper>
-                        <TestimonialSection>
-                            <TestH2>
-                                Testimonial
-                            </TestH2>
-                            <Slider>
-                                <Slides>
-                                    <SlideTop>
-                                        <SlideLeft>
-                                            Mark jonson
-                                        </SlideLeft>
-                                        <SlideRight>
-                                            <TestIcon>
-                                                <Icon src="" alt="Icon" />
-                                            </TestIcon>
-                                        </SlideRight>
-                                    </SlideTop>
-                                    <SlideBottom>
-                                        <SlidePara>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                            , when an unknown printer took a galley of type
-                                        </SlidePara>
-                                    </SlideBottom>
-                                </Slides>
-
-                                <Slides>
-                                    <SlideTop>
-                                        <SlideLeft>
-                                            Mark jonson
-                                        </SlideLeft>
-                                        <SlideRight>
-                                            <TestIcon>
-                                                <Icon src="" alt="Icon" />
-                                            </TestIcon>
-                                        </SlideRight>
-                                    </SlideTop>
-                                    <SlideBottom>
-                                        <SlidePara>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                            , when an unknown printer took a galley of type
-                                        </SlidePara>
-                                    </SlideBottom>
-                                </Slides>
-                            </Slider>
-                        </TestimonialSection>
-                    </Wrapper>
-                </Testimonial>
+               
+                
             </>
     )
 }
@@ -144,6 +74,7 @@ const Feature = styled.div`
 const Wrapper = styled.div`
     width: 90%;
     margin: 0 auto;
+    max-width: 1180px;
 `;
 const SectionItems = styled.div`
     
@@ -152,12 +83,24 @@ const SectionItem = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    flex-wrap: wrap;
 `;
 const SectionH2 = styled.div`
+    font-size: 40px;
+    width: 56%;
+    margin-bottom: 50px;
+    text-align: left;
+    @media all and (max-width: 980px){
+        width: 63%;
+    }
+`;
+const Section2H2 = styled.div`
     font-size: 40px;
     width: 50%;
     margin-bottom: 50px;
     text-align: right;
+    margin-left: auto;
+   
 `;
 const B =styled.b`
     font-weight: 700;
@@ -167,7 +110,13 @@ const SectionPara = styled.div`
     color: #818181;
     width: 80%;
     margin-bottom: 30px;
-    text-align: right;
+    text-align: left;
+`;
+const SectionPara1 = styled.div`
+    color: #818181;
+    width: 80%;
+    margin-bottom: 30px;
+    margin-left: auto;
 `;
 const SectionButton = styled.div`
     background: #000;
@@ -175,6 +124,14 @@ const SectionButton = styled.div`
     display: inline-block;
     color: #fff;
     border-radius: 8px;
+    transition: ease-in-out 0.5s;
+    &:hover{
+        background: #E9C649;
+        border-radius: 20px;
+        transition: 0.4s ease-in-out;
+        color: #fff;
+        cursor: pointer;
+    }
 `;
 const SectionAtag = styled.div`
     
@@ -182,87 +139,56 @@ const SectionAtag = styled.div`
 const SectionLeft = styled.div`
     width: 100%;
     text-align: left;
+    padding-top: 5%;
+    width: 50%;
+    @media all and (max-width:768px){
+        width: 100%;
+    }
 `;
 const SectionRight = styled.div`
+    width: 50%;
+    @media all and (max-width:768px){
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+`;
+const SectionRights = styled.div`
     text-align: right;
+    padding-top: 8%;
+    width: 50%;
+    @media all and (max-width:768px){
+        width: 100%;
+        margin-top: 20px;
+    }
+    
 `;
 const Image1 = styled.div`
-    
+    display: grid;
+    grid-gap: 20px;
+`;
+const Bo = styled.b`
+    font-weight: 700;
 `;
 const Img1 = styled.img`
-    margin-bottom: 22px;
+    grid-column: 1/span 2;
 `;
 const Img2 = styled.img`
-    margin-right: 22px;
+    grid-column:  1;
+    grid-row: 2;
 `;
 const Img3 = styled.img`
-    
+    grid-column: 2;
+    grid-row: 2;
 `;
 const Image2 = styled.div`
     width: 80%;
+    @media all and (max-width:768px){
+        width: 100%;
+    }
 `;
 const Img = styled.img`
     width: 100%;
     display: block;
-`;
-const About = styled.div`
-    
-`;
-const Container = styled.div`
-
-`;
-const Abouth2 = styled.div`
-
-`;
-const AboutLeft = styled.div`
-    
-`;
-const AboutRight = styled.div`
-    
-`;
-const AboutPara = styled.div`
-    
-`;
-const AboutImage = styled.div`
-    
-`;
-const RightImage = styled.div`
-    
-`;
-const Testimonial = styled.div`
-
-`;
-const TestimonialSection = styled.div`
-    
-`;
-const TestH2 = styled.div`
-    
-`;
-const Slider = styled.div`
-    
-`;
-const Slides = styled.div`
-    
-`;
-const SlideBottom = styled.div`
-    
-`;
-const SlideTop = styled.div`
-    
-`;
-const SlideLeft = styled.div`
-    
-`;
-const SlideRight = styled.div`
-    
-`;
-const TestIcon = styled.div`
-    
-`;
-const Icon = styled.img`
-    
-`;
-const SlidePara = styled.div`
-    
 `;
 

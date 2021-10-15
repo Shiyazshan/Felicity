@@ -84,14 +84,18 @@ const SpotlightSection = styled.div`
 const Wrapper = styled.div`
     width: 90%;
     margin: 0 auto;
+    max-width: 1180px;
 `;
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 2%;
+    align-items: center;
 `;
 const HeaderLeft = styled.div`
-    
+    @media all and (max-width: 768px){
+        width:16%
+    }
 `;
 const Logo = styled.img`
     
@@ -109,11 +113,16 @@ const HeaderLi = styled.li`
 `;
 const HeaderAtag = styled.a`
     color: #fff;
+    transition: 0.5s ease-in-out;
+    &:hover{
+        color: #000;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+    }
     
 `;
 const HeaderAtags = styled.a`
-    color: #000;
-    
+   
 `;
 const HeaderButton = styled.button`
     background: #fff;
@@ -121,6 +130,14 @@ const HeaderButton = styled.button`
     padding: 8px 18px;
     margin-left: 50px;
     border: none;
+    transition: 0.5s ease-in-out;
+    color: #000;
+    &:hover {
+        background: #E9C649;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        color: #fff;
+    }
 `;
 const SpotLightHeading = styled.h2`
     color: #fff;
@@ -128,6 +145,16 @@ const SpotLightHeading = styled.h2`
     width: 43%;
     margin: 0 auto;
     margin-bottom: 30px;
+    padding-top: 8%;
+    @media all and (max-width: 1080px) {
+        width: 60%;
+    }
+    @media all and (max-width: 768px){
+        width: 75%;        
+    }
+    @media all and (max-width: 640px){
+        font-size: 26px;
+    }   
 `;
 const SpotlightPara = styled.p`
     color: #fff;
@@ -139,13 +166,25 @@ const SpotlightButton = styled.button`
     border: none;
     padding: 12px 30px;
     border-radius: 8px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
+    color: #000;
+    transition: 0.5s ease-in-out;
+    &:hover{
+        background: #E9C649;
+        border-radius: 20px;
+        transition: 0.4s ease-in-out;
+        color: #fff;
+    }
 `;
 
 const SpotlightForm = styled.form`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media all and (max-width: 768px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 `;
 
 const SpotlightAtag = styled.a`
@@ -169,6 +208,10 @@ const Input = styled.input`
     border: none;
     padding: 8px 22px;
     border-radius: 20px;
+    @media all and (max-width: 768px){
+        margin: 0 10px 15px;
+    }
+    
     
 `;
 const InputSubmit = styled.input`
@@ -176,7 +219,17 @@ const InputSubmit = styled.input`
     color: #fff;
     border: none;
     padding: 8px 26px;
-    border-radius: 20px;
+    border-radius: 8px;
+    transition: ease-in-out 0.5s;
+    &:hover{
+        background: #E9C649;
+        border-radius: 20px;
+        transition: 0.4s ease-in-out;
+        color: #fff;
+    }
+    @media all and (max-width:768px){
+        margin: 0 auto;
+    }
 `;
 const SpotlightDate = styled.div`
     border-radius: 30px 30px 0 0;

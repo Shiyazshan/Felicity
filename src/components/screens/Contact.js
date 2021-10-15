@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 export default function Contact() {
+   
     return (
         <>
             <Contacts>
@@ -16,8 +18,7 @@ export default function Contact() {
                             </ContactH2>
                             <Contactpara>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever been the industry's 
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                                Lorem Ipsum has been the industry's  when an unknown printer took a galley of type
                             </Contactpara>
                         </ContactLeft>
                         <ContactRight>
@@ -41,47 +42,117 @@ export default function Contact() {
     )
 }
 const Contacts = styled.div`
-
+    background: #242423;
+    padding: 8% 0 6%;
+    color: #fff;
+    margin: 0 auto;
 `;
 
 const Wrapper = styled.div`
-    
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1180px;
 `;
 const ContactUs = styled.div`
-    
+    display: flex;
+    align-items: center;
+    @media all and (max-width: 768px){
+        
+    }
+
 `;
 const ContactH1 = styled.div`
-    
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @media all and (max-width: 980){
+        font-size: 40px;
+        
+    }
+
 `;
 const ContactH2 = styled.div`
-    
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    width: 46%;
+    @media all and (max-width: 980px){
+        width: 49%;
+        font-size: 22px;
+    }
+    @media all and (max-width:768px){
+        width: 56%;
+    }
 `;
 const Contactpara = styled.div`
-
+    width: 100%;
 `;
 
 const ContactRight = styled.div`
-    
+    position: relative;
+    width: 60%;
+    @media all and (max-width:768px){
+        width: 100%;
+    }
 `;
 const ContactLeft = styled.div`
-    
+    margin-right: 20px;
 `;
-const ContactForm = styled.div`
-    
+const ContactForm = styled.form`
+    background: #d75430;
+    padding: 45px 22px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: absolute;
+    top: -362px;
+    @media all and (max-width: 980px){
+        width: 90%;
+        top: -329px;
+        padding: 17px 22px;
+    }
 `;
-const FormButton = styled.div`
-    
+const FormButton = styled.button`
+    background: #000;
+    color: #fff;
+    padding: 8px 26px;
+    border-radius: 8px;
+    border: none;
+    margin: 0 auto;
+    width: 30%;
+    transition: ease-in-out 0.5s;
+    &:hover{
+        background: #E9C649;
+        border-radius: 20px;
+        transition: 0.4s ease-in-out;
+        color: #fff;
+    }
+    @media all and (max-width: 980px){
+        width: 36%;
+    }
 `;
-const ContactInput = styled.div`
+const ContactInput = styled.input`
     
+    border: none;
+    padding: 14px 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 `;
-const ContactTextarea = styled.div`
+const ContactTextarea = styled.textarea`
+    resize: none;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 15px;
+`;
 
-`;
-
-const FooterHead = styled.div`
-    
+const FooterHead = styled.h3`
+    text-align: center ;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
 `;
 const Footer = styled.div`
+    padding: 10px;
     
 `;
