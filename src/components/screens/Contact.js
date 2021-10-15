@@ -56,8 +56,8 @@ const Wrapper = styled.div`
 const ContactUs = styled.div`
     display: flex;
     align-items: center;
-    @media all and (max-width: 768px){
-        
+    @media all and (max-width: 640px){
+        flex-wrap: wrap;
     }
 
 `;
@@ -65,9 +65,14 @@ const ContactH1 = styled.div`
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
-    @media all and (max-width: 980){
+    @media all and (max-width: 980px){
         font-size: 40px;
-        
+    }
+    @media all and (max-width: 640px){
+        text-align: center;
+    }
+    @media all and (max-width: 360px){
+        font-size: 32px;
     }
 
 `;
@@ -83,9 +88,25 @@ const ContactH2 = styled.div`
     @media all and (max-width:768px){
         width: 56%;
     }
-`;
+    @media all and (max-width:640px){
+        width: 100%;
+        text-align: center;
+    }
+    @media all and (max-width:480px){
+        font-size: 18px;
+    }
+    @media all and (max-width:360px){
+        font-size: 14px;
+    }
+  `;
 const Contactpara = styled.div`
     width: 100%;
+    @media all and (max-width:640px){
+        text-align: center;
+    }
+    @media all and (max-width:480px){
+        font-size: 14px;
+    }
 `;
 
 const ContactRight = styled.div`
@@ -94,9 +115,19 @@ const ContactRight = styled.div`
     @media all and (max-width:768px){
         width: 100%;
     }
+    @media all and (max-width:640px){
+        width: 60%;
+        margin: 0 auto;
+    }
+    @media all and (max-width: 360px){
+        width: 80%;
+    }
 `;
 const ContactLeft = styled.div`
     margin-right: 20px;
+    @media all and (max-width:640px){
+        margin-bottom: 30px;
+    }
 `;
 const ContactForm = styled.form`
     background: #d75430;
@@ -112,6 +143,13 @@ const ContactForm = styled.form`
         top: -329px;
         padding: 17px 22px;
     }
+    @media all and (max-width:640px){
+        position: unset;
+    }
+    @media all and (max-width:360px){
+        width: 86%;
+    }
+    
 `;
 const FormButton = styled.button`
     background: #000;
@@ -130,6 +168,9 @@ const FormButton = styled.button`
     }
     @media all and (max-width: 980px){
         width: 36%;
+    }
+    @media all and(max-width:360px){
+        width: 58px;
     }
 `;
 const ContactInput = styled.input`

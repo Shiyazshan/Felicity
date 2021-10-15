@@ -34,6 +34,9 @@ const Abouts = styled.div`
     background: #353e4e;
     color: #fff;
     padding: 2% 0;
+    @media all and (max-width: 640px){
+        padding: 4%;
+    }
 `;
 const Wrapper = styled.div`
     width: 90%;
@@ -49,18 +52,25 @@ const Abouth2 = styled.div`
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
+    @media all and (max-width: 640px){
+        text-align: center;
+    }
 `;
 const AboutLeft = styled.div`
     
 `;
 const AboutRight = styled.div`
     width: 100%;
-    @media all and (max-width: 7686px){
+    @media all and (max-width: 768px){
         display: none;
     }
 `;
 const AboutPara = styled.div`
     width: 90%;
+    @media all and (max-width:640px){
+        width: 100%;
+        text-align: center;
+    }
 `;
 const AboutImage = styled.div`
     

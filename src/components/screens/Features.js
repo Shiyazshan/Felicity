@@ -93,6 +93,11 @@ const SectionH2 = styled.div`
     @media all and (max-width: 980px){
         width: 63%;
     }
+    @media all and (max-width: 480px){
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
 `;
 const Section2H2 = styled.div`
     font-size: 40px;
@@ -100,6 +105,10 @@ const Section2H2 = styled.div`
     margin-bottom: 50px;
     text-align: right;
     margin-left: auto;
+    @media all and (max-width: 640px){
+        text-align: center;
+        width: 100%;
+    }
    
 `;
 const B =styled.b`
@@ -111,12 +120,23 @@ const SectionPara = styled.div`
     width: 80%;
     margin-bottom: 30px;
     text-align: left;
+    @media all and (max-width: 640px){
+        width: 100%;
+    }
+    @media all and (max-width: 480px){
+        width: 100%;
+        text-align: center;
+    }
 `;
 const SectionPara1 = styled.div`
     color: #818181;
     width: 80%;
     margin-bottom: 30px;
     margin-left: auto;
+    @media all and (max-width: 640px){
+        text-align: center;
+        width: 100%;
+    }
 `;
 const SectionButton = styled.div`
     background: #000;
@@ -144,6 +164,9 @@ const SectionLeft = styled.div`
     @media all and (max-width:768px){
         width: 100%;
     }
+    @media all and (max-width:480px){
+        text-align: center;
+    }
 `;
 const SectionRight = styled.div`
     width: 50%;
@@ -160,6 +183,12 @@ const SectionRights = styled.div`
     @media all and (max-width:768px){
         width: 100%;
         margin-top: 20px;
+    }
+    @media all and (max-width: 640px){
+        text-align: center;
+    }
+    @media all and (max-width: 480px){
+        display:none;
     }
     
 `;
@@ -185,6 +214,9 @@ const Image2 = styled.div`
     width: 80%;
     @media all and (max-width:768px){
         width: 100%;
+    }
+    @media all and (max-width:640px){
+        display: none;
     }
 `;
 const Img = styled.img`
